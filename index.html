@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+   
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Weather Analysis Visualization</title>
+</head>
+<body style="background-color: lightgray">
+    
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand logo" href="index.html"> 
+                <span class="nav-color">Latitude</span></a>
+            </div>
+
+            <div class="nav navbar-nav navbar-right">
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Plots<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="temperature.html">Max Temperature</a></li>
+                        <li><a href="humidity.html">Humidity</a></li>
+                        <li><a href="cloudiness.html">Cloudiness</a></li>
+                        <li><a href="wind_speed.html">Wind Speed</a></li>
+                    </ul>
+                </li>
+                <li><a href="comparison.html"> Comparison</a></li>
+                <li><a href="data.html"> Data</a></li>                                           
+            </div>
+        </div>      
+    </nav>
+
+    <div class = "container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+
+                    <h2>Latitude vs X</h2>
+                    <hr>
+                    <img class="first image" src="Images/Latitude_vs_MaxTemp.png" alt="first image" >
+                    <p class = "text">This is an analysis and visualization of weather of 500+ cities across the world. The main objective of the analysis was to see the correlation between factors like temperature, humidity, cloudiness , wind speed and Latitude. <br> 
+                   A weather check was performed on each  of the unique cities using a series of successive API calls from OpenWeatherMap. Then all the different point of interests were plotted against latitude using Matplotlib.<br> 
+                   The analysis shows that an equatorial climate is depicted by higher temperature and humidity. There is no conclusive correlation between wind speed and the distance from the equator.The clouds seem to be concentrated equally near the equator and the tropics.However, the higher humidity near the equator gives an indication of the possiblity of the clouds being the of the type "cumulonimbus".</p>
+                    <br>        
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                        <div class="panel-body">                                    
+                            <h2>Visualizations</h2>
+                            <hr>
+
+                            <div class="row" >
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="temperature.html"><img class = "img img-responsive" src="Images/Latitude_vs_MaxTemp.png" style="width:100%" alt=""></a></div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="humidity.html"><img class = "img img-responsive" src="Images/Latitude_vs_Humidity.png" style="width:100%" alt=""></a></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="cloudiness.html"><img class = "img img-responsive" src="Images/Latitude_vs_Cloudiness.png" style="width:100%" alt=""></a></div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="wind_speed.html"><img class = "img img-responsive" src="Images/Latitude_vs_WindSpeed.png" style="width:100%" alt=""></a></div>
+                            </div>
+                                
+                        </div>
+                </div>     
+            </div>    
+    </div>
+</body>
+</html>
